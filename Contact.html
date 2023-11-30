@@ -126,13 +126,14 @@
         <div class="image-text">Let's Talk!</div>
 
         <div class="alt-text">At Marco's, we want you to be heard.<br> Speak to us and contact us and 
-          we'll liaise with you shortly.</div>
+          we'll liase with you shortly.</div>
       </div>
     </div>
   </div> 
 
   <div class="center-label">
   <h2>Contact Us</h2>
+  <form>
  
   <h3>Name *</h3>
     <input type="text" style="width: 450px; height: 50px"
@@ -184,22 +185,54 @@
     <br>
 
 
-    <button type="submit">Submit</button>
-
+    <button type="button" id="btnSubmit"
+              name="btnSubmit">Submit</button>
+    </form>
   </div>
 
+  <div id="userdetails"></div>
+
+  <script>
+    let btnSubmit = document.getElementById('btnSubmit');
+    let msg = "";
+
+    btnSubmit.addEventListener('click', function (e) {
+              e.preventDefault(); 
+          
+    let name = 
+    document.getElementById('username').value;
+    msg += `Name: ${name}<br/>`;
+
+    let email =
+    document.getElementById('email').value;
+    msg += `Email: ${email}<br/>`;
+
+    let subject =
+    document.getElementById('subject').value;
+    msg += `Subject: ${subject}<br/>`;
+
+    let contact =
+    document.getElementById('number').value;
+    msg += `Phone Number: ${contact}<br/>`;
+
+    document.getElementById('userdetails').innerHTML = msg;
+
+    });  
+
+  </script>
+</body>
+
+
   <br>
   <br>
   <br>
 
-  <h4><a href="#Up">Back To Top</a></h6>
+  <h4><a href="#Up">Back To The Top</a></h6>
 
             <h4>&copy; Copyright 
               <strong>The Marco's Restaurant.</strong>
               All Rights Reserved</h4>
-
-            </body>
-
+</html>
             
 
 
