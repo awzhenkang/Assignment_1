@@ -124,6 +124,14 @@
             text-align: center;
           }
 
+          @media (max-width: 576px) {
+        .split {
+          flex: 1 100%;
+          flex-basis: 100%;
+          flex-grow: inherit;
+        }
+      }
+
         </style>
     </header>
 
@@ -193,6 +201,7 @@
               
             <h2>BOOK YOUR TABLE</h2>  
             <div class="form-container">
+            <form id="myFrm">
 
               <br>
               <br>
@@ -210,6 +219,7 @@
               
                 <input type ="date"
                 placeholder="Date"
+                id="dateIn"
                 value="18/11/2023" min="2023/01/01" 
                 max="2025/12/31">
 
@@ -293,15 +303,15 @@
               placeholder="Mr."
               required>
 
-              <option>Mr.</option> 
-                <option value="1">Mr.</option>
-                <option value="2">Mrs.</option>    
-                <option value="3">Ms.</option>
-                <option value="4">Miss.</option>
-                <option value="5">Mdm.</option>
-                <option value="6">Dr.</option>
-                <option value="7">Prof.</option>
-                <option value="8">Chef</option>          
+                <option>Mr</option> 
+                <option>Mr</option>
+                <option>Mrs</option>    
+                <option>Ms</option>
+                <option>Miss</option>
+                <option>Mdm</option>
+                <option>Dr</option>
+                <option>Prof</option>
+                <option>Chef</option>          
             
               </select>
 
@@ -321,7 +331,7 @@
               <input type="text"
               placeholder="Last Name"
               name="username"
-              id="username"
+              id="user"
               onclick="handleClick()"
               required>
 
@@ -331,8 +341,8 @@
 
               <input type="text"
               placeholder="+65"
-              name="username"
-              id="username"
+              name="phone"
+              id="phone"
               onclick="handleClick()"
               required>
 
@@ -342,12 +352,14 @@
 
               
               <textarea name="textarea" rows="5" cols="94"
+              id="request"
               placeholder="Speical Request"
               ></textarea>   
               
               <br><br>
 
-              <button type="submit">SUBMIT</button>
+              <button type="button" onclick="grabListItem()" id="btnSubmit"
+              name="btnSubmit">Submit</button>
 
               <br>
 
@@ -377,17 +389,75 @@
 
               <h5>Instant Reservation</h5>
 
-              </form>
-            </div>
+            </form>
+          </div>
 
-            <h6><a href="#Up">Back To Top</a></h6>
+          <br>
+          <br>
 
-            <h6>&copy; Copyright 
-              <strong>The Marco's Restaurant.</strong>
-              All Rights Reserved</h6>
-            
+          <div id="details" align="center"></div>
 
+
+            <script>
+              let btnSubmit = document.getElementById('btnSubmit');
+              let msg = "";
+
+              btnSubmit.addEventListener('click', function (e) {
+              e.preventDefault(); 
+
+              let dateInput = document.getElementById("dateIn");
+              let selctedDate = dateInput.value;
+
+
+              let parts = selctedDate.split("-");
+              let formattedDate = `${parts[2]}-${parts[1]}-${parts[0]}`;
+
+              msg += `Date: ${formattedDate}<br/>`;
+
+              let value = document.getElementById("timeDropdown").value;
+              msg += `Time: ${value}<br/>`;
+
+              let pax = document.getElementById("numberOfPax").value;
+              msg += `Number of Pax: ${pax}<br/>`;
+
+              let children = document.getElementById("numberOfChildren").value;
+              msg += `Number of Children: ${children}<br/>`;
+
+              let salutation = document.getElementById("nameOfPerson").value;
+              let first_name = document.getElementById('username').value;
+              
+              let last_name = document.getElementById('user').value;
+              msg += `Name: ${salutation} ${first_name} ${last_name}<br/>`;
+
+              let contact =
+                document.getElementById('phone').value;
+                msg += `Phone Number: ${contact}<br/>`;
+
+              let subject =
+                document.getElementById('request').value;
+                msg += `Special Request: ${subject}<br/>`;
+
+              document.getElementById
+              ('details').innerHTML = msg;                 
+              });   
+                                      
+          </script>
         </body>
+        </html>
+
+        <br>
+        <br>
+        <br>
+          
+          <h6><a href="#Up">Back To Top</a></h6>
+
+          <h6>&copy; Copyright 
+            <strong>The Marco's Restaurant.</strong>
+            All Rights Reserved</h6>
+
+          
+
+      
 
         
 
