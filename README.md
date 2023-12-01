@@ -2,7 +2,7 @@
 
 ## The prupose of this website is to show what the restaurant has to offer to diners. People can browse the menu on the website, which can be convenient before visiting the restaurant. The website can also serve as a contact form, for diners to voice out any concerns after dining at the restaurant.
 
-### Features being implemented is the Home Page, where it shows pictures of what food diners can expect when visiting the restauarnt. It shows a sneak peak of the interior , together with the exact location, so that customer can find our restaurant easily and also attract customers to dine.
+### Features being implemented is the Home Page, where it shows pictures of what food diners can expect when visiting the restauarnt. It shows a sneak peak of the interior , together with the exact location, so that customer can find our restaurant easily and also attract customers to dine. The page also has the restaurant's operating hours and secondary contact to third-party booking websites like quandoo.sg and chop.co to reserve a table at the restaurant.
 
 The Resveration Page is where customers can place their resevration before visitng our restaurant. This will allow the people working there to reserve a seat for them once they have arrived at our restauarnt. Customers will also have to enter their phone number, so that our staff can contact them should the need arises.
 
