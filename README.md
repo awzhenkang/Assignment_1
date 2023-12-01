@@ -16,4 +16,4 @@ A Memership page where customers can sign on to become a member on our website. 
 
 A News page is where customers can read up where do our produce comes from, what is the backstory of our food items, personalised menus for people to try at home etc. This can be an exciting addition to our webpage.
 
-##### I have taken inspiration from www.doughsupply.co, www.harrys.com.sg/reservation and https://nouri.com.sg/restaurant-menu/.
+##### I have taken inspiration from www.doughsupply.co, www.harrys.com.sg and https://nouri.com.sg/restaurant-menu/.
